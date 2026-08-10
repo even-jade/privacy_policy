@@ -19,6 +19,7 @@
   <p>· No sign-up. We do not ask for your name, email, or phone number.</p>
   <p>· <strong>Your trip data stays on your device</strong> and is never sent to our servers.</p>
   <p>· The app requests <strong>no device permissions at all.</strong></p>
+  <p>· Location is resolved to <strong>country/region only</strong> — not your city or device model.</p>
   <p>· We collect <strong>anonymous usage statistics and crash reports</strong> to improve the app.</p>
   <p>· We show no ads and we do not sell your information.</p>
 </div>
@@ -74,15 +75,15 @@
       <td>Up to 14 months</td>
     </tr>
     <tr>
-      <td>Device information (model, OS version, language, country)</td>
+      <td>Country/region, language, platform and major OS version</td>
       <td>Google Analytics for Firebase</td>
-      <td>Understanding which devices and environments to support</td>
+      <td>Understanding which environments to support</td>
       <td>Up to 14 months</td>
     </tr>
     <tr>
       <td>IP address</td>
       <td>Google Analytics for Firebase</td>
-      <td>Deriving approximate country/region. Not stored afterwards</td>
+      <td>Used only to derive country/region. Not stored afterwards</td>
       <td>Not stored</td>
     </tr>
     <tr>
@@ -104,6 +105,23 @@
   <strong>These records never contain the content of your trips.</strong> The values transmitted are
   content-free metrics such as "an itinerary item was added", "an image was saved", or "how many days
   a trip spans". Text you enter — trip names, destinations, notes — is never sent in any field.
+</p>
+
+<h3>Granular location and device data is not collected</h3>
+<p>
+  Google Analytics' <strong>"granular location and device data collection" setting is turned off.</strong>
+  As a result, the following are not collected:
+</p>
+<ul>
+  <li>City-level location, latitude and longitude</li>
+  <li>Device brand, device model, device name</li>
+  <li>Screen resolution</li>
+  <li>Minor versions of the operating system and platform</li>
+</ul>
+<p>
+  Location is resolved only to <strong>country and region level</strong>; the city you are in is
+  neither collected nor stored. The App requests no permission to access your device's location
+  services such as GPS.
 </p>
 
 <h2>3. Sharing and Processing by Third Parties</h2>
