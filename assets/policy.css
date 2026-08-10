@@ -1,0 +1,74 @@
+/* 모든 앱의 처리방침이 공유하는 스타일.
+   앱이 늘어나도 이 파일 하나만 고치면 전체 문서의 모양이 함께 바뀐다. */
+
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic",
+               "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.75;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 5rem;
+  max-width: 46rem;
+  color: #1f2937;
+  background: #ffffff;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+h1 { font-size: 1.6rem; margin: 0 0 .4rem; letter-spacing: -.02em; }
+h2 {
+  font-size: 1.1rem; margin: 2.4rem 0 .7rem; padding-top: 1.2rem;
+  border-top: 1px solid #e5e7eb; letter-spacing: -.01em;
+}
+h3 { font-size: .98rem; margin: 1.4rem 0 .4rem; }
+p, li { font-size: .95rem; }
+ul { padding-left: 1.2rem; }
+li { margin: .3rem 0; }
+a { color: #1d4ed8; }
+
+.meta { color: #6b7280; font-size: .85rem; margin-bottom: 2rem; }
+
+.lead {
+  background: #f8fafc; border: 1px solid #e5e7eb; border-radius: .6rem;
+  padding: 1rem 1.1rem; margin: 1.6rem 0;
+}
+.lead p { margin: .35rem 0; }
+.lead strong { color: #0f172a; }
+
+/* 표는 자체 영역에서 가로 스크롤한다 — 본문이 밀려나면 모바일에서 읽을 수 없다. */
+table {
+  width: 100%; border-collapse: collapse; margin: .8rem 0;
+  font-size: .87rem; display: block; overflow-x: auto;
+}
+th, td { border: 1px solid #e5e7eb; padding: .5rem .6rem; text-align: left; vertical-align: top; }
+th { background: #f8fafc; font-weight: 600; white-space: nowrap; }
+
+/* 허브 페이지의 앱 목록 */
+.apps { list-style: none; padding: 0; margin: 1.6rem 0; }
+.apps li {
+  border: 1px solid #e5e7eb; border-radius: .6rem;
+  padding: .9rem 1.1rem; margin: .6rem 0;
+}
+.apps a { font-weight: 600; font-size: 1rem; text-decoration: none; }
+.apps .sub { display: block; color: #6b7280; font-size: .85rem; margin-top: .2rem; }
+
+footer {
+  margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid #e5e7eb;
+  color: #6b7280; font-size: .85rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  body { color: #e5e7eb; background: #0f172a; }
+  h2 { border-top-color: #1f2937; }
+  a { color: #93c5fd; }
+  .meta, footer { color: #9ca3af; }
+  .lead { background: #111827; border-color: #1f2937; }
+  .lead strong { color: #f9fafb; }
+  th, td { border-color: #1f2937; }
+  th { background: #111827; }
+  .apps li { border-color: #1f2937; }
+  .apps .sub { color: #9ca3af; }
+  footer { border-top-color: #1f2937; }
+}
