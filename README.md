@@ -3,7 +3,22 @@
 Yoni.Gyun 이 만든 앱들의 **개인정보 처리방침을 게시하는 저장소**다.
 GitHub Pages 로 서비스되며, 여기 있는 URL 이 각 앱의 스토어 등록정보에 들어간다.
 
-**게시 주소**: https://minkyunkim-kor.github.io/privacy_policy/
+**게시 주소**: https://even-jade.github.io/privacy_policy/
+
+> ⚠️ **이 주소는 GitHub username 에 묶여 있다.**
+>
+> username 을 바꾸면 저장소 URL(`github.com/<user>/repo`)은 GitHub 이 리다이렉트해 주지만
+> **Pages 주소(`<user>.github.io`)는 리다이렉트되지 않고 그대로 404 가 된다.**
+> 2026-08 에 `minkyunkim-kor` → `even-jade` 로 바꿨을 때 실제로 방침 URL 이 죽었다.
+>
+> 처리방침 URL 접근 불가는 **Play 심사 반려 사유**다. username 을 바꾸면 반드시:
+> 1. 이 README 의 주소들
+> 2. 각 앱 저장소의 문서(TripTable 은 `README.md`, `STORE_LISTING.md`)
+> 3. **Play Console 의 개인정보 처리방침 입력값**
+>
+> 세 곳을 함께 고친다. 3번을 빠뜨리면 스토어에 죽은 링크가 걸린 채로 남는다.
+>
+> 주소가 username 에 묶이는 게 부담되면 커스텀 도메인을 붙이는 방법도 있다.
 
 ---
 
@@ -11,7 +26,7 @@ GitHub Pages 로 서비스되며, 여기 있는 URL 이 각 앱의 스토어 등
 
 | 앱 | 한국어 (정본) | English |
 |----|--------------|---------|
-| TripTable | [/triptable/](https://minkyunkim-kor.github.io/privacy_policy/triptable/) | [/triptable/en/](https://minkyunkim-kor.github.io/privacy_policy/triptable/en/) |
+| TripTable | [/triptable/](https://even-jade.github.io/privacy_policy/triptable/) | [/triptable/en/](https://even-jade.github.io/privacy_policy/triptable/en/) |
 
 ---
 
