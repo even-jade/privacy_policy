@@ -13,7 +13,7 @@ GitHub Pages 로 서비스되며, 여기 있는 URL 이 각 앱의 스토어 등
 >
 > 처리방침 URL 접근 불가는 **Play 심사 반려 사유**다. username 을 바꾸면 반드시:
 > 1. 이 README 의 주소들
-> 2. 각 앱 저장소의 문서(TripTable 은 `README.md`, `STORE_LISTING.md`)
+> 2. 각 앱 저장소의 문서(여행첩은 `README.md`, `STORE_LISTING.md`)
 > 3. **Play Console 의 개인정보 처리방침 입력값**
 >
 > 세 곳을 함께 고친다. 3번을 빠뜨리면 스토어에 죽은 링크가 걸린 채로 남는다.
@@ -26,7 +26,7 @@ GitHub Pages 로 서비스되며, 여기 있는 URL 이 각 앱의 스토어 등
 
 | 앱 | 한국어 (정본) | English |
 |----|--------------|---------|
-| TripTable | [/triptable/](https://even-jade.github.io/privacy_policy/triptable/) | [/triptable/en/](https://even-jade.github.io/privacy_policy/triptable/en/) |
+| 여행첩 (구 TripTable) | [/triptable/](https://even-jade.github.io/privacy_policy/triptable/) | [/triptable/en/](https://even-jade.github.io/privacy_policy/triptable/en/) |
 
 ---
 
@@ -92,6 +92,10 @@ privacy_policy/
 
 ### 코드 변경
 
+- 사진·메모 등 **이용자 콘텐츠의 저장 방식 변경** — 여행첩 방침은 "사진은 리사이즈 사본만,
+  EXIF 는 촬영 시각·회전만, 자동 백업 제외, 원본 미보관" 을 사실로 적고 있다.
+  `PhotoStore` / `backup_rules.xml` / `data_extraction_rules.xml` 을 바꾸면 방침도 고친다
+- 사진·여행 데이터의 동기화·업로드 도입 — 데이터 안전 양식의 "사용자 콘텐츠 = 수집 안 함" 이 뒤집힌다
 - 광고 SDK 도입 (수집·제3자 공유 항목이 늘어난다)
 - 인앱결제 도입
 - 분석·크래시 도구 추가·교체
