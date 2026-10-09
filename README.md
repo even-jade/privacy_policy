@@ -14,7 +14,7 @@ GitHub Pages 로 서비스되며, 여기 있는 URL 이 각 앱의 스토어 등
 > 처리방침 URL 접근 불가는 **Play 심사 반려 사유**다. username 을 바꾸면 반드시:
 > 1. 이 README 의 주소들
 > 2. 각 앱 저장소의 문서(여행첩은 `README.md`, `STORE_LISTING.md`)
-> 3. **Play Console 의 개인정보 처리방침 입력값**
+> 3. **Play Console 의 개인정보 처리방침 URL 과 데이터 삭제 요청 URL 입력값**
 >
 > 세 곳을 함께 고친다. 3번을 빠뜨리면 스토어에 죽은 링크가 걸린 채로 남는다.
 >
@@ -24,9 +24,10 @@ GitHub Pages 로 서비스되며, 여기 있는 URL 이 각 앱의 스토어 등
 
 ## 게시된 방침
 
-| 앱 | 한국어 (정본) | English |
-|----|--------------|---------|
-| 여행첩 (구 TripTable) | [/triptable/](https://even-jade.github.io/privacy_policy/triptable/) | [/triptable/en/](https://even-jade.github.io/privacy_policy/triptable/en/) |
+| 앱 | 문서 | 한국어 (정본) | English |
+|----|------|--------------|---------|
+| 여행첩 (구 TripTable) | 처리방침 | [/triptable/](https://even-jade.github.io/privacy_policy/triptable/) | [/triptable/en/](https://even-jade.github.io/privacy_policy/triptable/en/) |
+| 여행첩 (구 TripTable) | 계정·데이터 삭제 요청 | [/triptable/delete/](https://even-jade.github.io/privacy_policy/triptable/delete/) | [/triptable/en/delete/](https://even-jade.github.io/privacy_policy/triptable/en/delete/) |
 
 ---
 
@@ -38,8 +39,11 @@ privacy_policy/
 ├── assets/
 │   └── policy.css          # 모든 방침이 공유하는 스타일
 ├── triptable/
-│   ├── index.html          # 한국어 (정본)
-│   └── en/index.html       # 영문
+│   ├── index.html          # 처리방침 한국어 (정본)
+│   ├── delete/index.html   # 계정·데이터 삭제 요청 한국어 (정본)
+│   └── en/
+│       ├── index.html          # 처리방침 영문
+│       └── delete/index.html   # 계정·데이터 삭제 요청 영문
 └── .nojekyll               # Jekyll 빌드 건너뛰기
 ```
 
@@ -56,10 +60,28 @@ privacy_policy/
 1. `<앱이름>/index.html` 을 만든다. 기존 `triptable/index.html` 을 복사해 쓰는 게 빠르다.
 2. 스타일은 인라인으로 넣지 말고 공통 시트를 링크한다.
    - 최상위 앱 디렉터리에서: `<link rel="stylesheet" href="../assets/policy.css">`
-   - 한 단계 더 깊은 곳(`en/`)에서: `../../assets/policy.css`
+   - 한 단계 더 깊은 곳(`en/`, `delete/`)에서: `../../assets/policy.css`
+   - 두 단계 더 깊은 곳(`en/delete/`)에서: `../../../assets/policy.css`
 3. 영문판이 필요하면 `<앱이름>/en/index.html` 에 둔다.
 4. 최상위 `index.html` 의 앱 목록에 한 줄 추가한다.
 5. `main` 에 push 하면 몇 분 안에 반영된다.
+
+---
+
+## 데이터 삭제 요청 페이지
+
+계정을 만드는 앱은 Play Console 의 데이터 안전 양식에 **앱을 설치하지 않고도 닿을 수 있는**
+계정·데이터 삭제 요청 URL 을 따로 적어야 한다. 앱 안의 "계정 지우기" 만으로는 이 요건을 채우지 못한다.
+
+- 서버 백엔드가 없으므로 폼 제출이 아니라 **안내 + 메일 요청** 방식이다. 연락처는 방침의 문의처와 같은
+  주소를 쓴다.
+- Play 가 요구하는 내용: 앱 이름·개발자명, 앱에서 지우는 단계, 앱 없이 요청하는 방법, **지워지는 데이터와
+  남는 데이터**, 처리 기간. 하나라도 빠지면 양식이 반려될 수 있다.
+- 메일 요청은 개발자가 **콘솔에서 손으로** 처리한다(인증 계정·Firestore 문서·R2 객체). 페이지에 적은
+  처리 기간(10일)을 지키기 위한 절차는 여행첩 저장소의
+  [`DATA_DELETION_RUNBOOK.md`](https://github.com/even-jade/trip_table/blob/main/DATA_DELETION_RUNBOOK.md)
+  에 있다(비공개 저장소라 소유자만 열린다). 절차가 바뀌어 지워지는 것·남는 것이 달라지면 삭제 페이지와 방침 6항도 함께 고친다.
+- 이 URL 도 처리방침 URL 처럼 한 번 등록하면 바꾸지 않는다.
 
 ---
 
@@ -113,6 +135,19 @@ Play 데이터 안전 양식을 **둘 다** 고쳐야 한다.
 
 특히 위치 항목은, 이 설정을 켜는 순간 GA4 가 도시 단위를 수집하기 시작해
 데이터 안전 양식의 "대략적인 위치 = 수집 안 함" 신고가 **사실과 달라진다.**
+
+### 여행첩 v3(보관·함께 편집)가 근거로 쓰는 값
+
+되돌릴 수 없거나 코드에 있는 값이지만, 방침이 그대로 옮겨 적은 것이라 함께 적어 둔다.
+정본은 trip_table 저장소의 `PRIVACY_POLICY_V3_DRAFT.md` 와 `DESIGN_SYNC_IMPLEMENTATION_PLAN.md` §7 이다.
+
+| 값 | 현재 | 방침에서 근거로 쓰는 문장 |
+|----|------|--------------------------|
+| Firestore 데이터베이스 위치 | `asia-northeast3`(서울) — 생성 시 고정 | 국외 이전 표의 "대한민국 서울 리전" |
+| R2 버킷 위치 힌트 | `APAC` — 힌트일 뿐 국가 보장 아님 | "아시아·태평양 지역 … 특정 국가를 보장하지 않습니다". **한 나라로 적지 않는다** |
+| 사진 Worker 의 멤버십 캐시 | 최대 60초 | "확인 결과를 최대 1분간 다시 쓰므로 …" |
+| 익명 계정 삭제 | 재인증 수단이 없어 거부될 수 있음 | "개인정보가 담기지 않은 익명 식별자가 인증 서비스에 남을 수 있습니다" |
+| `CLOUD_ENABLED`(release) | v3 작성 시점에 **꺼짐** | v3 전체. 켜기 전에 v3 와 삭제 요청 페이지가 게시되어 있어야 한다 |
 
 ---
 

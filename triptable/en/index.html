@@ -10,18 +10,25 @@
 
 <h1>Yeohaengcheop Privacy Policy</h1>
 <p class="meta">
-  Effective: 6 September 2026 · Last updated: 6 September 2026 · First effective: 11 August 2026<br>
+  Effective: 20 October 2026 · Last updated: 9 October 2026 · First effective: 11 August 2026<br>
   Yeohaengcheop (여행첩) is the new name of TripTable. The app identifier and the developer are unchanged.<br>
-  <a href="../">한국어 (정본 / authoritative version)</a>
+  <a href="delete/">Account &amp; data deletion</a> · <a href="../">한국어 (정본 / authoritative version)</a>
 </p>
 
 <div class="lead">
   <p><strong>Summary</strong></p>
-  <p>· No sign-up. We do not ask for your name, email, or phone number.</p>
-  <p>· <strong>Your trips, photos and notes stay on your device</strong> and are never sent to our servers.</p>
-  <p>· The app requests <strong>no device permissions at all.</strong> It only receives photos you pick yourself in the system photo picker.</p>
+  <p>· No sign-up needed to use the App. We do not ask for your name or phone number.</p>
+  <p>· Your trips, photos and notes are stored on your device. <strong>Unless you connect an account or
+    join shared editing, they never leave your device.</strong></p>
+  <p>· If you connect a Google account, your trips and photos are <strong>kept in cloud storage on the
+    Yeohaengcheop server</strong>, so they appear on your other devices signed in to the same account, and you
+    can edit a trip together with companions you give an invite code to. The server runs on Google and
+    Cloudflare infrastructure.</p>
+  <p>· You can delete your account in the App at any time, or request deletion without the App on the
+    <a href="delete/">deletion request page</a>.</p>
+  <p>· The App <strong>never asks you for device permissions</strong> while running. It only receives photos you pick yourself in the system photo picker.</p>
   <p>· Location is resolved to <strong>country/region only</strong> — not your city or device model.</p>
-  <p>· We collect <strong>anonymous usage statistics and crash reports</strong> to improve the app.</p>
+  <p>· We collect <strong>anonymous usage statistics and crash reports</strong> to improve the App.</p>
   <p>· We show no ads and we do not sell your information.</p>
 </div>
 
@@ -32,11 +39,11 @@
   <a href="../">Korean version</a> is the authoritative text.
 </p>
 
-<h2>1. Information We Do Not Collect</h2>
+<h2>1. Information We Do Not Collect, and Data on Your Device</h2>
 <p>The App does <strong>not</strong> collect:</p>
 <ul>
-  <li>Your name, email address, phone number, postal address, or date of birth</li>
-  <li>Account credentials — the App has no sign-up or login</li>
+  <li>Your name, phone number, postal address, or date of birth — the App never asks you for them. If you
+    connect an account, section 2 explains how your Google account's email address and name are handled</li>
   <li>Access to your contacts, photo library, files, microphone, or camera — the App requests none of
     these permissions. Photos reach the App only through the Android system photo picker, and
     <strong>only the photos you choose</strong>; the App cannot read your photo library</li>
@@ -46,9 +53,14 @@
 <h3>Your trip, photo and note data</h3>
 <p>
   Trip names, destinations, dates, itinerary items, notes, accommodation and transport details that
-  you enter, and the photos you attach to your itinerary, are <strong>stored only in your device's
-  local storage.</strong> They are never transmitted to the Developer's servers or to any third
-  party, and the Developer cannot access them.
+  you enter, and the photos you attach to your itinerary, are <strong>stored in your device's local
+  storage.</strong>
+</p>
+<p>
+  <strong>If you do not connect an account and do not join shared editing, this data is never transmitted
+  to the Developer's servers or to any third party.</strong> In that case the App does not even create an
+  account on the server, and the Developer cannot access your data. Section 2 describes what is sent when you
+  connect an account or join shared editing with an invite code.
 </p>
 <h3>How photos are handled</h3>
 <ul>
@@ -59,14 +71,16 @@
   <li>When making the copy, the App reads only the <strong>capture time and orientation</strong> from the
     photo's metadata (EXIF). <strong>Location (GPS) and all other metadata are not carried into the
     copy.</strong></li>
-  <li>Photo copies are never transmitted to the Developer's servers or to any third party.</li>
+  <li>If you connect an account, <strong>this copy</strong> is what is uploaded. Original photos and their
+    capture location are never sent to the server.</li>
 </ul>
 <h3>Automatic backup</h3>
 <p>
   If you have Android's automatic backup enabled, your trips and notes may be backed up to
   <strong>your own Google account.</strong> That transfer takes place between you and Google;
   the Developer has no access to those backups. <strong>Photo copies are excluded from automatic
-  backup.</strong> To move photos to another device, use the export feature described below.
+  backup.</strong> To move photos to another device, use the export feature described below or the cloud
+  storage described in section 2.
 </p>
 <h3>Export and import</h3>
 <p>
@@ -82,10 +96,107 @@
   the app you select.
 </p>
 
-<h2>2. Information Collected Automatically</h2>
+<h2>2. If You Connect an Account — Cloud Storage and Shared Editing</h2>
+<p>
+  Cloud storage and shared editing are <strong>optional features you choose to use</strong>. They are not
+  required to use the App; without them, trip planning and the photo album work exactly the same.
+</p>
+<p>
+  When you <strong>connect a Google account</strong> in Settings ▸ Cloud storage (보관), all trips on this
+  device and any trips you create afterwards are kept on the Yeohaengcheop server and become visible on your
+  other devices signed in to the same account. The following is stored on the server:
+</p>
+
+<table>
+  <thead>
+    <tr><th>Data</th><th>Purpose</th><th>Retention</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Trip records: trip name, destination and dates, itinerary items and notes, accommodation and transport details</td>
+      <td>Cloud storage, viewing on your other devices, shared editing</td>
+      <td>Until you delete your account. A trip you delete is removed at that time (exceptions in section 7)</td>
+    </tr>
+    <tr>
+      <td>Photos (the downsized copies described in section 1) and photo information (which trip and item a photo belongs to, capture time, caption, time added, and the account identifier of the uploader)</td>
+      <td>As above</td>
+      <td>As above. A photo you delete is removed at that time</td>
+    </tr>
+    <tr>
+      <td>Account identifier (a randomly generated value). Trip records and photos also carry the identifier of whoever last changed or uploaded them</td>
+      <td>Finding your trips; checking that a requester is a member of the trip</td>
+      <td>Until you delete your account</td>
+    </tr>
+    <tr>
+      <td>Your Google account's email address and basic profile (name, profile photo URL); account creation and last sign-in time</td>
+      <td>Sign-in. Kept with your account by the authentication service (Google Firebase Authentication)</td>
+      <td>Until you delete your account</td>
+    </tr>
+    <tr>
+      <td>Display name — only if you join someone else's trip for shared editing while your Google account is connected</td>
+      <td>Showing your companions who is taking part</td>
+      <td>Until you leave that trip, shared editing ends, the trip's creator deletes the trip or their account, or you delete your account</td>
+    </tr>
+    <tr>
+      <td>Invite codes and the trip each code points to</td>
+      <td>Letting a companion join shared editing</td>
+      <td>An invite code expires and stops working 7 days after it is created. It is deleted when revoked, when shared editing ends, or when you delete your account</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <strong>Your email address is not stored in your trip records or in anything your companions can see.</strong>
+  It is held by the authentication service so that you can sign in, and is deleted together with your account.
+</p>
+<p>
+  While requests are exchanged, each provider's infrastructure processes your IP address. The Developer does
+  not separately record or keep it.
+</p>
+
+<h3>Joining shared editing anonymously</h3>
+<p>
+  You can join a trip for shared editing with an invite code from a companion without connecting a Google
+  account. In that case the App creates an <strong>anonymous account identifier</strong>, with no name or
+  email, on the server and records it as a member of that trip. Only <strong>the changes you make and the
+  photos you add in that trip</strong> are uploaded. Any other trip you create, before or after joining, stays
+  on your device only, and is kept in cloud storage only once you connect a Google account.
+</p>
+<p>
+  An anonymous account cannot be recovered once the App is uninstalled, and because it has no name or
+  email it is hard to verify you without the App. <strong>Please use Settings ▸ Cloud storage (보관) ▸ Delete
+  account (계정 지우기) before uninstalling.</strong>
+</p>
+
+<h3>Who can see your data</h3>
+<ul>
+  <li>Your own devices signed in to the same Google account</li>
+  <li>Companions <strong>you personally gave an invite code to</strong> — for that trip only. Invite codes are
+    12 characters long, expire after 7 days, and can be revoked by their creator at any time</li>
+  <li>No one else. Photos have no public URL, and the server checks on every request that the requester is a
+    member of the trip. That check is reused for up to one minute, so for one minute after someone loses
+    access (shared editing ends, they leave, or an account is deleted) they may still be able to download or
+    upload that trip's photos</li>
+</ul>
+
+<h3>When shared editing ends</h3>
+<p>
+  When the person who created a trip ends shared editing, its invite codes are revoked and companions can no
+  longer see the trip. Records already downloaded to a companion's device remain on that device.
+</p>
+
+<h3>Retention</h3>
+<p>
+  The server copy is kept <strong>until you delete your account</strong>. Uninstalling the App does not
+  remove the server copy. To remove it, use <strong>Settings ▸ Cloud storage (보관) ▸ Delete account
+  (계정 지우기)</strong> before uninstalling, or, if you have already uninstalled the App, follow the
+  <a href="delete/">deletion request page</a>. Section 6 describes what deletion does.
+</p>
+
+<h2>3. Information Collected Automatically</h2>
 <p>
   To improve the App and fix errors, the following is collected automatically through
-  Google LLC's Firebase services.
+  Google LLC's Firebase services, whether or not you connect an account.
 </p>
 
 <table>
@@ -129,8 +240,9 @@
 <p>
   <strong>These records never contain the content of your trips.</strong> The values transmitted are
   content-free metrics such as "an itinerary item was added", "an image was saved", "N photos were
-  added", or "how many days a trip spans". Text you enter — trip names, destinations, notes — and
-  <strong>the photos themselves are never sent in any field.</strong>
+  added", "how many days a trip spans", or "an account was connected". Text you enter — trip names,
+  destinations, notes — and <strong>the photos themselves are never sent in any field.</strong> The account
+  identifier and email address described in section 2 are not included either.
 </p>
 
 <h3>Granular location and device data is not collected</h3>
@@ -150,42 +262,136 @@
   services such as GPS.
 </p>
 
-<h2>3. Sharing and Processing by Third Parties</h2>
+<h2>4. Sharing and Processing by Third Parties</h2>
 <p>
   The Developer does not sell your information and does not provide it to third parties for
   advertising purposes. The App contains no advertising.
 </p>
-<p>The data described in section 2 is processed by:</p>
-<ul>
-  <li>
-    <strong>Google LLC</strong> — usage analytics and crash reporting.<br>
-    <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a> ·
-    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
-  </li>
-</ul>
+<p>The Developer uses the following service providers (processors) to run the App:</p>
+<table>
+  <thead>
+    <tr><th>Processor</th><th>Service</th><th>Data processed</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google LLC</td>
+      <td>Usage analytics and crash reporting (Google Analytics for Firebase, Firebase Crashlytics)</td>
+      <td>Section 3 data</td>
+    </tr>
+    <tr>
+      <td>Google LLC</td>
+      <td>Sign-in and account management (Firebase Authentication); storage of trip records and photo information (Cloud Firestore)</td>
+      <td>Section 2 data other than photo files</td>
+    </tr>
+    <tr>
+      <td>Cloudflare, Inc.</td>
+      <td>Storage of photo files (Cloudflare R2); membership checks and relay when photos are uploaded or downloaded (Cloudflare Workers)</td>
+      <td>Photo files; the requester's account identifier, sign-in token (used only for verification, not stored) and IP address</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  Privacy policies:
+  <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a> ·
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> ·
+  <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>
+</p>
+<p>
+  Companions see your trip records, photos and display name in shared editing only because you chose to give
+  them an invite code. The Developer does not disclose your information to other people on your behalf.
+</p>
 <p>
   Information may be disclosed where required by law, such as in response to a lawful request from
   a public authority.
 </p>
 
-<h2>4. International Data Transfers</h2>
+<h2>5. International Data Transfers</h2>
 <p>
-  The data in section 2 is transferred to and processed by Google LLC in the United States and other
-  countries where Google operates servers. Where required by applicable law, Google applies
-  recognised transfer safeguards such as the European Commission's Standard Contractual Clauses.
-  Data protection laws in those countries may differ from those in your country of residence.
-  If you do not want this transfer, you can stop collection using the methods in section 6.
+  Section 3 data, and — if you connect an account or join shared editing — section 2 data, is entrusted to
+  and stored by providers outside the Republic of Korea, as follows. This is necessary to provide the cloud
+  storage and shared editing features you choose to use.
+</p>
+<table>
+  <thead>
+    <tr><th>Recipient</th><th>Data</th><th>Country / region</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google LLC</td>
+      <td>Section 3 data</td>
+      <td>The United States and other countries where Google operates servers</td>
+    </tr>
+    <tr>
+      <td>Google LLC</td>
+      <td>Section 2 account data (authentication)</td>
+      <td>The United States and other countries where Google operates servers</td>
+    </tr>
+    <tr>
+      <td>Google LLC</td>
+      <td>Section 2 trip records and photo information</td>
+      <td>Stored in the Seoul, Republic of Korea region (asia-northeast3). The operator is a provider based outside Korea</td>
+    </tr>
+    <tr>
+      <td>Cloudflare, Inc.</td>
+      <td>Section 2 photo files</td>
+      <td>Stored in facilities in the Asia-Pacific region. Location can only be specified at the region level,
+        so no specific country is guaranteed. Upload and download requests are handled at the Cloudflare
+        facility nearest to you</td>
+    </tr>
+  </tbody>
+</table>
+<ul>
+  <li><strong>When and how</strong>: transmitted over the network as you use the App (encrypted in transit)</li>
+  <li><strong>Recipients' purpose and retention</strong>: as described in sections 2 and 3</li>
+  <li><strong>Recipients' contact</strong>: the contact details in each provider's privacy policy linked in section 4</li>
+</ul>
+<p>
+  Where required by applicable law, Google and Cloudflare apply recognised transfer safeguards such as the
+  European Commission's Standard Contractual Clauses. Data protection laws in those countries may differ from
+  those in your country of residence.
+</p>
+<p>
+  <strong>If you do not want this transfer</strong>, do not connect an account or join shared editing. Your
+  trip data then never leaves your device, and trip planning and the photo album work exactly the same. If
+  you have already connected, Settings ▸ Cloud storage (보관) ▸ Delete account (계정 지우기) deletes the
+  server copy and returns the App to its pre-connection state. Collection of section 3 data can be stopped
+  as described in section 7.
 </p>
 
-<h2>5. Retention and Deletion</h2>
+<h2>6. Retention, Deletion and Account Deletion</h2>
 <p>
-  Data described in section 2 is deleted automatically by Google once the retention period listed
+  Data described in section 3 is deleted automatically by Google once the retention period listed
   there expires. Trips, notes and photo copies stored on your device are deleted when you delete them
   in the App or uninstall the App. Files you created with the export feature live outside the App and
   must be deleted by you.
 </p>
+<h3>When you delete your account</h3>
+<p>
+  Use <strong>Settings ▸ Cloud storage (보관) ▸ Delete account (계정 지우기)</strong> in the App. If you
+  have already uninstalled the App or cannot delete from within it, follow the
+  <a href="delete/">deletion request page</a>.
+</p>
+<ul>
+  <li>Your trip records and photos on the server, and your account (including your email and other sign-in
+    data), are deleted</li>
+  <li><strong>Trips and photos on this device remain.</strong> The App returns to its pre-connection state</li>
+  <li>Companions you were editing with can no longer see the trip. Records already downloaded to their
+    devices remain on those devices</li>
+  <li><strong>Changes you made and photos you added in a companion's trip remain part of that trip.</strong>
+    The random account identifier recorded on them remains too, and is deleted when that trip or photo is
+    deleted. To remove those photos, delete them in the App before deleting your account</li>
+  <li>If the server cleanup cannot finish, your account is not deleted and the App tells you so. Check your
+    connection and try again</li>
+  <li><strong>If you joined shared editing anonymously</strong>, your membership records on the server are
+    deleted, but if the authentication service requires you to re-verify, there is no way to do so for an
+    anonymous account, and <strong>an anonymous identifier containing no personal information may remain in
+    the authentication service.</strong> No name, email or other information that identifies you is linked
+    to it, and it may remain without a set retention period</li>
+  <li>Section 3 statistics and crash records are not linked to your account, so deleting your account does
+    not delete them; they are deleted when their retention period expires</li>
+</ul>
 
-<h2>6. Your Choices and Rights</h2>
+<h2>7. Your Choices and Rights</h2>
 <p>You can exercise the following directly:</p>
 <ul>
   <li>
@@ -193,17 +399,27 @@
     Android Settings → Privacy → Ads → <em>Delete advertising ID</em>
     (the path may be Settings → Google → Ads on some devices)
   </li>
-  <li><strong>Stop all collection</strong> — uninstall the App</li>
-  <li><strong>Delete your trip data</strong> — delete trips or photos in the App, or uninstall the App</li>
+  <li><strong>Stop all collection</strong> — uninstall the App. Note that the server copy remains after
+    uninstalling, so also delete your account as below</li>
+  <li><strong>Delete the server copy and your account</strong> — Settings ▸ Cloud storage (보관) ▸ Delete
+    account (계정 지우기), or without the App via the <a href="delete/">deletion request page</a></li>
+  <li><strong>Leave shared editing</strong> — from the menu of a trip you joined. The person who created a
+    trip can end shared editing or revoke its invite code</li>
+  <li><strong>Delete your trip data</strong> — delete trips or photos in the App, or uninstall the App. If you
+    have connected an account, trips and photos you delete in the App are deleted from the server as well.
+    However, if you delete a trip that has been cut off from the server (shown in the App as 떨어져 나온 여행), or if
+    deleting a photo file fails, the server copy may remain until that trip is deleted or you delete your
+    account</li>
   <li><strong>Take your data with you</strong> — use Export in Settings to save your trips, notes and photos as a file</li>
 </ul>
 <p>
   Depending on where you live, you may also have rights to access, correct, delete, or restrict
   processing of your personal data, and to withdraw consent. To make such a request, contact the
-  Developer at the address in section 8.
+  Developer at the address in section 9. The Developer will act on your request and reply within 10 days
+  of receiving it.
 </p>
 <p>
-  Please note: the data in section 2 is processed in statistical form and keyed to identifiers that
+  Please note: the data in section 3 is processed in statistical form and keyed to identifiers that
   do not directly identify you. Locating or deleting one individual's records may therefore be
   technically impracticable. Where that is the case, the Developer will act to the extent verification
   is possible and will explain the limitation.
@@ -213,10 +429,10 @@
   <strong>The Developer does not sell or share personal information</strong> as those terms are
   defined by the CCPA/CPRA. California residents may exercise their rights to know, delete, and
   correct personal information, and will not be discriminated against for doing so, by contacting
-  the Developer at the address in section 8.
+  the Developer at the address in section 9.
 </p>
 
-<h2>7. Children</h2>
+<h2>8. Children</h2>
 <p>
   The App is not directed to children under the age of 14, or such higher age as may be required by
   the law applicable to you, and the Developer does not knowingly collect their personal information.
@@ -224,21 +440,24 @@
   If you believe a child's information has been collected, please contact the Developer.
 </p>
 
-<h2>8. Contact</h2>
+<h2>9. Contact</h2>
 <ul>
   <li><strong>Data protection officer</strong>: Yoni.Gyun</li>
   <li><strong>Email</strong>: <a href="mailto:yonigyun@gmail.com">yonigyun@gmail.com</a></li>
 </ul>
 
-<h2>9. Security</h2>
+<h2>10. Security</h2>
 <ul>
-  <li>Data in section 2 is encrypted in transit (HTTPS)</li>
-  <li>Trip data and photo copies are stored inside the Android application sandbox and are not accessible to other apps</li>
+  <li>Section 3 data and section 2 cloud storage and shared editing data are encrypted in transit (HTTPS)</li>
+  <li>Trip records on the server can be read and written only by members of that trip, enforced by access rules</li>
+  <li>Photo files are kept in private storage with no public URL. The relay server verifies your sign-in and
+    checks trip membership on each request before serving a photo</li>
+  <li>On your device, trip data and photo copies are stored inside the Android application sandbox and are not accessible to other apps</li>
   <li>Photo copies carry no location or other metadata from the original</li>
-  <li>The Developer keeps no separate store of information that could identify you</li>
+  <li>Apart from the section 2 data needed to provide the service, the Developer keeps no separate store of information that could identify you</li>
 </ul>
 
-<h2>10. Changes to This Policy</h2>
+<h2>11. Changes to This Policy</h2>
 <p>
   If this policy changes, the changes and their effective date will be posted on this page.
   Material changes, or changes unfavourable to users, will be posted at least 7 days before they
@@ -248,6 +467,14 @@
 
 <h3>Change history</h3>
 <ul>
+  <li><strong>20 October 2026</strong> — Added cloud storage (connecting a Google account) and shared editing.
+    Described the data stored on the server when you connect an account or join shared editing, with its
+    purposes and retention (section 2); processing by Google Firebase Authentication, Cloud Firestore,
+    Cloudflare R2 and Workers, and the related international transfers (sections 4 and 5); how to delete your
+    account and what deletion does (section 6); and a <a href="delete/">web page</a> for requesting deletion
+    without the App. <strong>Unchanged: if you neither connect an account nor join shared editing, your trip
+    data never leaves your device; and the categories, purposes and retention of automatically collected data
+    are the same.</strong></li>
   <li><strong>6 September 2026</strong> — App renamed from TripTable to Yeohaengcheop. Added photos and
     notes on itinerary items and trip export/import; described how they are handled (on-device storage,
     downsized photo copies and metadata, exclusion from automatic backup). <strong>No change to the
@@ -257,7 +484,7 @@
 
 <footer>
   Yeohaengcheop (formerly TripTable) · Developer Yoni.Gyun · Contact yonigyun@gmail.com<br>
-  Effective 6 September 2026
+  Effective 20 October 2026
 </footer>
 
 </body>
