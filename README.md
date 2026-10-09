@@ -80,7 +80,7 @@ privacy_policy/
 - 메일 요청은 개발자가 **콘솔에서 손으로** 처리한다(인증 계정·Firestore 문서·R2 객체). 페이지에 적은
   처리 기간(10일)을 지키기 위한 절차는 여행첩 저장소의
   [`DATA_DELETION_RUNBOOK.md`](https://github.com/even-jade/trip_table/blob/main/DATA_DELETION_RUNBOOK.md)
-  에 있다. 절차가 바뀌어 지워지는 것·남는 것이 달라지면 삭제 페이지와 방침 6항도 함께 고친다.
+  에 있다(비공개 저장소라 소유자만 열린다). 절차가 바뀌어 지워지는 것·남는 것이 달라지면 삭제 페이지와 방침 6항도 함께 고친다.
 - 이 URL 도 처리방침 URL 처럼 한 번 등록하면 바꾸지 않는다.
 
 ---
